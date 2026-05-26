@@ -267,6 +267,7 @@ h3 {
 .workflows,
 .use-cases,
 .example,
+.faq,
 .contact,
 .intake-hero {
   padding: clamp(58px, 8vw, 96px) clamp(18px, 5vw, 64px);
@@ -419,6 +420,30 @@ h3 {
   margin-top: 30px;
 }
 
+.faq {
+  background: #eef4ef;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.faq-list article {
+  min-width: 0;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.faq-list p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .workflow-item {
   display: grid;
   grid-template-columns: 54px 1fr;
@@ -503,6 +528,7 @@ h3 {
   .price-grid,
   .workflow-list,
   .example-grid,
+  .faq-list,
   .use-case {
     grid-template-columns: 1fr;
   }
