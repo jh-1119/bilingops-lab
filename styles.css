@@ -266,6 +266,7 @@ h3 {
 .band,
 .workflows,
 .use-cases,
+.example,
 .contact,
 .intake-hero {
   padding: clamp(58px, 8vw, 96px) clamp(18px, 5vw, 64px);
@@ -308,6 +309,62 @@ h3 {
 
 .use-cases {
   background: #f7f5ef;
+}
+
+.example {
+  background: var(--white);
+  border-block: 1px solid var(--line);
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.example-grid article {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.example-input {
+  background: #fbfbf7;
+}
+
+.example-output {
+  background: #eef4ef;
+}
+
+.example-label {
+  margin-bottom: 12px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.example-input p:last-child,
+.example-output p:last-child {
+  margin-bottom: 0;
+}
+
+.output-list {
+  display: grid;
+  gap: 8px;
+}
+
+.output-list span {
+  min-width: 0;
+  padding: 10px 12px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--green-dark);
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .use-case-stack {
@@ -445,6 +502,7 @@ h3 {
   .columns,
   .price-grid,
   .workflow-list,
+  .example-grid,
   .use-case {
     grid-template-columns: 1fr;
   }
