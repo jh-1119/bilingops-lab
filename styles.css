@@ -138,11 +138,13 @@ h3 {
 }
 
 .hero-actions,
+.contact-actions,
 .contact .button {
   display: inline-flex;
 }
 
-.hero-actions {
+.hero-actions,
+.contact-actions {
   flex-wrap: wrap;
   gap: 12px;
 }
