@@ -268,6 +268,7 @@ h3 {
 .use-cases,
 .example,
 .faq,
+.calculator-section,
 .contact,
 .intake-hero {
   padding: clamp(58px, 8vw, 96px) clamp(18px, 5vw, 64px);
@@ -444,6 +445,83 @@ h3 {
   color: var(--muted);
 }
 
+.calculator-section {
+  background: var(--white);
+  border-block: 1px solid var(--line);
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 18px;
+}
+
+.calculator-panel,
+.calculator-result {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.calculator-panel {
+  display: grid;
+  gap: 16px;
+  background: #fbfbf7;
+}
+
+.calculator-panel label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.calculator-panel input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 800;
+}
+
+.calculator-result {
+  background: #eef4ef;
+}
+
+.result-metric {
+  margin-bottom: 14px;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.result-metric span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.result-metric strong {
+  display: block;
+  color: var(--green-dark);
+  font-size: 34px;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.calculator-result p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .workflow-item {
   display: grid;
   grid-template-columns: 54px 1fr;
@@ -529,6 +607,7 @@ h3 {
   .workflow-list,
   .example-grid,
   .faq-list,
+  .calculator-grid,
   .use-case {
     grid-template-columns: 1fr;
   }
