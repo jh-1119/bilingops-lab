@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BilingOps Lab | Customer Inquiry Automation Demo</title>
+    <meta
+      name="description"
+      content="Interactive bilingual customer inquiry automation prototype by BilingOps Lab."
+    >
+    <link rel="stylesheet" href="./demo.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand" href="./index.html" aria-label="BilingOps Lab home">
+        <span class="brand-mark">BL</span>
+        <span>BilingOps Lab</span>
+      </a>
+      <nav aria-label="Demo navigation">
+        <a href="./index.html">Landing</a>
+        <a href="mailto:dlwlsgh1200@gmail.com?subject=Prototype%20demo%20inquiry">Contact</a>
+      </nav>
+    </header>
+
+    <main class="app-shell">
+      <section class="workspace">
+        <div class="intro">
+          <p class="eyebrow">Prototype demo</p>
+          <h1>한영 고객 문의 자동화 데모</h1>
+          <p>
+            문의 원문을 넣으면 요약, 분류, 리스크, 액션 아이템, 답장 초안, CRM 입력값을 한 번에 정리합니다.
+          </p>
+        </div>
+
+        <div class="demo-grid">
+          <section class="panel input-panel" aria-labelledby="input-title">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Input</p>
+                <h2 id="input-title">Incoming inquiry</h2>
+              </div>
+              <span id="detected-language" class="pill">Language: mixed</span>
+            </div>
+
+            <div class="sample-tabs" role="group" aria-label="Sample inquiries">
+              <button type="button" class="sample-button active" data-sample="academy">Academy</button>
+              <button type="button" class="sample-button" data-sample="export">Export</button>
+              <button type="button" class="sample-button" data-sample="commerce">Ecommerce</button>
+            </div>
+
+            <label class="field-label" for="inquiry">Inquiry text</label>
+            <textarea id="inquiry" spellcheck="false" wrap="soft"></textarea>
+
+            <div class="controls">
+              <label>
+                Output
+                <select id="output-language">
+                  <option value="ko">Korean reply</option>
+                  <option value="en">English reply</option>
+                </select>
+              </label>
+              <label>
+                Tone
+                <select id="tone">
+                  <option value="professional">Professional</option>
+                  <option value="warm">Warm</option>
+                  <option value="concise">Concise</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="button-row">
+              <button id="run" class="primary" type="button">Run workflow</button>
+              <button id="copy-reply" class="secondary" type="button">Copy reply</button>
+              <button id="download-csv" class="secondary" type="button">Download CSV</button>
+            </div>
+          </section>
+
+          <section class="panel output-panel" aria-labelledby="output-title">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Output</p>
+                <h2 id="output-title">Review queue</h2>
+              </div>
+              <span id="status-pill" class="pill strong">Ready</span>
+            </div>
+
+            <div class="summary-strip">
+              <div>
+                <span>Category</span>
+                <strong id="category">-</strong>
+              </div>
+              <div>
+                <span>Urgency</span>
+                <strong id="urgency">-</strong>
+              </div>
+              <div>
+                <span>Owner</span>
+                <strong id="owner">-</strong>
+              </div>
+              <div>
+                <span>Time saved</span>
+                <strong id="time-saved">-</strong>
+              </div>
+            </div>
+
+            <div class="output-section">
+              <h3>Internal summary</h3>
+              <p id="summary"></p>
+            </div>
+
+            <div class="output-section two-col">
+              <div>
+                <h3>Action items</h3>
+                <ul id="actions"></ul>
+              </div>
+              <div>
+                <h3>Risk flags</h3>
+                <ul id="risks"></ul>
+              </div>
+            </div>
+
+            <div class="output-section">
+              <h3>Customer reply draft</h3>
+              <textarea id="reply" readonly wrap="soft"></textarea>
+            </div>
+
+            <div class="output-section">
+              <h3>CRM fields</h3>
+              <div id="crm-fields" class="crm-grid"></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="pipeline">
+          <div>
+            <span>1</span>
+            Capture inquiry
+          </div>
+          <div>
+            <span>2</span>
+            Extract intent
+          </div>
+          <div>
+            <span>3</span>
+            Draft response
+          </div>
+          <div>
+            <span>4</span>
+            Human review
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./demo.js"></script>
+  </body>
+</html>
