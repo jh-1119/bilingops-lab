@@ -57,12 +57,13 @@ a {
 
 .brand-mark {
   display: inline-grid;
-  width: 34px;
+  width: 42px;
   height: 34px;
   place-items: center;
   background: var(--green);
   color: white;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 850;
   border-radius: 7px;
 }
 

@@ -64,13 +64,14 @@ textarea {
 
 .brand-mark {
   display: inline-grid;
-  width: 34px;
+  width: 42px;
   height: 34px;
   place-items: center;
   background: var(--green);
   color: white;
   border-radius: 7px;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 850;
 }
 
 nav {
